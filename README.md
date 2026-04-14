@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="64" height="64" alt="icon" src="https://github.com/user-attachments/assets/04d8b894-6003-4821-94a5-e82281134789" />
+  <img width="121" height="121" alt="icon" src="https://github.com/user-attachments/assets/04d8b894-6003-4821-94a5-e82281134789" />
 </p>
 
 # Muoi — B2B Invoice Manager
