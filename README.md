@@ -80,8 +80,6 @@ xcodebuild -project B2BInvoiceApp.xcodeproj \
            -configuration Release build
 ```
 
-Chi tiết tài liệu tham khảo [Documentation/README.md](Documentation/README.md).
-
 ## License
 
 MIT © Muoi
