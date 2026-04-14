@@ -38,29 +38,46 @@ https://25112231and25112235oopmidterm.vercel.app
 - Xcode 15+
 - Swift 5.9+
 ```
-## Chạy dự án
+## Cấu trúc mã nguồn
 
-```bash
+```
+App/
+  B2BApp.swift              @main + AppDelegate + menu bar
+  Assets.xcassets           Màu thích ứng light/dark + icon
+Models/
+  Models.swift              Invoice, Client Core Data entities
+Services/
+  CoreDataManager.swift     Core Data stack, CRUD
+  SyncManager.swift         Auto-sync
+  APIService.swift          Tỷ giá, quốc gia, VietQR URL
+Utilities/
+  Constants.swift           AppConstants: cấu hình toàn app
+  Extensions.swift          Màu, modifier glass, formatter
+  Localization.swift        LocalizationManager (vi/en)
+  ValidationHelper.swift    Validate email, phone, amount…
+Views/
+  MainWindow.swift          NavigationSplitView shell
+  MainSidebar.swift         Sidebar menu
+  DashboardView.swift       StatCard.swift
+  InvoiceListView.swift     InvoiceTableView.swift
+  InvoiceDetailView.swift   NewInvoiceSheet.swift
+  ClientsListView.swift     ClientsTableView.swift
+  NewClientSheet.swift
+  SettingsView.swift        SettingsFormView.swift
+  PreferencesWindow.swift   AboutWindow.swift
+  ListHeaderToolbar.swift
+```
+
+## Build & Run
+
+```
+# Mở trong Xcode
 open B2BInvoiceApp.xcodeproj
-# Product → Run (Cmd+R)
-```
 
-Hoặc build release:
-
-```bash
-xcodebuild -project B2BInvoiceApp.xcodeproj -scheme B2BInvoiceApp -configuration Release build
-```
-
-## Cấu trúc
-
-```
-App/          Entry point + Assets
-Models/       Core Data entities (Invoice, Client)
-Services/     CoreDataManager, SyncManager, APIService
-Utilities/    Constants, Extensions, Localization, ValidationHelper
-Views/        SwiftUI views (dashboard, list, detail, sheet, settings)
-Documentation/Tài liệu chi tiết
-website/      Landing page & file .dmg phân phối
+# Hoặc build trực tiếp
+xcodebuild -project B2BInvoiceApp.xcodeproj \
+           -scheme B2BInvoiceApp \
+           -configuration Release build
 ```
 
 Chi tiết tài liệu tham khảo [Documentation/README.md](Documentation/README.md).
