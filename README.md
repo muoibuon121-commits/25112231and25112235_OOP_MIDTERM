@@ -38,7 +38,7 @@ https://25112231and25112235oopmidterm.vercel.app
 - Xcode 15+
 - Swift 5.9+
 ```
-## Cấu trúc dự 
+## Cấu trúc dự án
 
 ```
 App/
